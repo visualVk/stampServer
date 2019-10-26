@@ -152,7 +152,7 @@ class VertifyStampHandler(tornado.web.RequestHandler):
         # cv2.imwrite('org_image.png', org_image)
         no_rotate_img, contours = cut_image(org_image)
         if no_rotate_img is not None:
-            # cv2.imwrite('not_rotate_img.png', no_rotate_img)
+            cv2.imwrite('not_rotate_img.png', no_rotate_img)
             not_rotate_result_img = get_stamp(no_rotate_img)
             # cv2.imwrite('not_rotate_result_img.png', not_rotate_result_img)
             not_rotate_result = test_compare_pic(not_rotate_result_img)
